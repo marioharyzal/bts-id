@@ -13,4 +13,4 @@ Cara menjalankan Program:
   
 2. Pada proses login di sini mengembalikan respons token dan akan kadaluarsa dalam 25 detik. jika user ingin mengakses getuser maka harus membuat property header "authorization" dengan value Bearer +token dari proses login
 
-3. untuk mengatasi harus login terus karena token invalid pada saat getusers maka frontend harus melakukan request interceptors ke POST "/users/refresh-token" dengan req.body token diisi dengan cookie
+3. untuk mengatasi harus login terus karena token invalid/forbidden pada saat getusers maka frontend harus melakukan request interceptors ke POST "/users/refresh-token" dengan req.body "token" diisi dengan cookie. Tetapi jika token belum invalid saat request ke /api/users pada saat proses development/production, maka langsung bisa di lakukan di postman.
