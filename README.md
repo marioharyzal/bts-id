@@ -11,8 +11,6 @@ Jadi saya membuat program menggunakan expressjs.
 Cara menjalankan Program:
 1. Buat database dengan nama db_test atau bisa di lihat di .env
   
-2. Routes pada program
-  Pada proses login di sini mengembalikan respons token dan akan kadaluarsa dalam 25 detik.
-  jika user ingin mengakses getuser maka harus membuat property header "authorization" dengan value Bearer +token dari proses login
+2. Pada proses login di sini mengembalikan respons token dan akan kadaluarsa dalam 25 detik. jika user ingin mengakses getuser maka harus membuat property header "authorization" dengan value Bearer +token dari proses login
 
-  untuk mengatasi harus login terus pada saat sudah production maka frontend harus melakukan request interceptors ke "/users/refresh-token"
+3. untuk mengatasi harus login terus pada saat sudah production maka frontend harus melakukan request interceptors ke "/users/refresh-token"
